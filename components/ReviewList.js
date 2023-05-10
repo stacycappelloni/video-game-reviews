@@ -6,8 +6,7 @@ function navigateToForm(){
     location.href = "AddReview";
 }
 
-export default function ReviewList({beginningData}){
-    const [data, setData] = useState(beginningData);
+export default function ReviewList({data, error, mutate}){
     return <PageWrapper>
         <PageTitle>Video Game Reviews</PageTitle>
         <AddReviewButton onClick={() => navigateToForm()}>+ Add Review</AddReviewButton>

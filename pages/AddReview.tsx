@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import Head from 'next/head'
-import ReviewList from "../components/ReviewList"
+import AddReviewPage from "../components/AddReviewPage"
 import useSWR from 'swr'
 import {useState} from "react";
 
@@ -23,6 +23,7 @@ export default function Home() {
       <link rel="preconnect" href="https://fonts.gstatic.com"/>
       <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"></link>
     </Head>
-    <ReviewList data={data} error={error} mutate={mutate}/> 
+    <AddReviewPage data={data} error={error} mutate={mutate}/> 
+  
   </>
 }
