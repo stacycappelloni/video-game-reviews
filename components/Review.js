@@ -13,14 +13,14 @@ export default function Review({ reviewData }){
 
 const ReviewItem = styled.li`
   flex: 1;
-  max-height: fit-content;
+  height: fit-content;
   flex-basis: 400px;
   background-color: #fff;
   color: #000;
   margin: 0.55rem;
   padding: 15px;
   overflow: hidden;
-  max-width: 45%;
+  max-width: 45rem;
 `;
 
 const GameTitle = styled.h2`

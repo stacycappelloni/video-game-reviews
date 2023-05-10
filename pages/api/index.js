@@ -26,9 +26,4 @@ export default async function request(req, res){
         res.status(200).json(data)
 
     } 
-
-    let { data, error } = await supabase.from('reviews').select('*')
-
-    //send the data back as a result if everything goes as expected 
-    res.status(200).json(data)
 }

@@ -13,7 +13,7 @@ export default function ReviewList({data, error, mutate}){
         <ListWrapper>
         {data.length > 0 ?
             (data.map((singleReview) => (
-                <Review reviewData={singleReview}>
+                <Review reviewData={singleReview} key={singleReview.title}>
                 </Review>
             ))) : (
                 <p>No reviews to display.</p>
