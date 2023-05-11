@@ -28,6 +28,15 @@ const GlobalStyle = createGlobalStyle`
   button {
     transition: all 0.3s;
   }
+
+  select:hover{
+    transform: translateY(-2px);
+    filter: brightness(93%);
+  }
+
+  select {
+    transition: all 0.3s;
+  }
 `
 
 export default GlobalStyle

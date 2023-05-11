@@ -60,23 +60,23 @@ export default function AddReviewPage({data, error, mutate}) {
         <BackButton onClick={navigateToMainPage}>Back</BackButton>
         {/*referenced Material UI documentation -- https://mui.com/material-ui/react-rating/ */}
         <InputForm onSubmit={submitForm}>
-            <FieldName for="title">Game Title: </FieldName>
+            <FieldName htmlFor="title">Game Title: </FieldName>
             <LineSpacer></LineSpacer>
             <InputField id="title" value={titleValue} onChange={(e) => setTitleValue(e.target.value)}></InputField>
 
             <LineSpacer></LineSpacer>
 
-            <FieldName for="stars">Rating: <Rating id="stars" name="star-input" defaultValue={0} precision={0.5} value={starValue} onChange={(e) => setStarValue(e.target.value)}/></FieldName>
+            <FieldName htmlFor="stars">Rating: <Rating id="stars" name="star-input" defaultValue={0} value={starValue} onChange={(e) => setStarValue(e.target.value)}/></FieldName>
             
             <LineSpacer></LineSpacer>
 
-            <FieldName for="platform">Game Platform: </FieldName>
+            <FieldName htmlFor="platform">Game Platform: </FieldName>
             <LineSpacer></LineSpacer>
             <ShortInputField id="platform" value={platformValue} onChange={(e) => setPlatformValue(e.target.value)}></ShortInputField>
 
             <LineSpacer></LineSpacer>
 
-            <FieldName for="review">Your Review:</FieldName>
+            <FieldName htmlFor="review">Your Review:</FieldName>
             <LongInputField id="review" value={reviewValue} onChange={(e) => setReviewValue(e.target.value)}></LongInputField>
             <SubmitButton>Submit</SubmitButton>
         </InputForm>
