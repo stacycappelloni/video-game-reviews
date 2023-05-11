@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
-
+// reference: https://stackoverflow.com/questions/65297617/how-to-make-an-elements-background-color-a-little-darker-using-css
 const GlobalStyle = createGlobalStyle`
   html,
   body {
@@ -18,6 +18,15 @@ const GlobalStyle = createGlobalStyle`
 
   * {
     box-sizing: border-box;
+  }
+
+  button:hover{
+    transform: translateY(-2px);
+    filter: brightness(90%);
+  }
+
+  button {
+    transition: all 0.3s;
   }
 `
 
