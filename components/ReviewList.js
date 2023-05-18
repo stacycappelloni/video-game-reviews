@@ -94,4 +94,6 @@ left: 20px;`
 const NoReviewsText = styled.h2`
 font-family: 'Press Start 2P';
 color: #fff;
+font-weight: 400;
+margin-left: 15px;
 `

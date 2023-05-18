@@ -10,10 +10,10 @@ export default function Home() {
   const { data, mutate, error } = useSWR("/api", fetcher)
 
   if (!data){
-    return <p>loading...</p>
+    return <StyledText>loading...</StyledText>
   }
   if (error){
-    return <p>error!</p>
+    return <StyledText>error!</StyledText>
   }
 
   return <>
@@ -26,3 +26,10 @@ export default function Home() {
     <ReviewList data={data} error={error} mutate={mutate}/> 
   </>
 }
+
+const StyledText = styled.h2`
+font-family: 'Press Start 2P';
+color: #fff;
+font-weight: 400;
+text-align: center;
+`
