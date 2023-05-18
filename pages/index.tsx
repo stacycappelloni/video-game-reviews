@@ -10,18 +10,15 @@ export default function Home() {
   const { data, mutate, error } = useSWR("/api", fetcher)
 
   if (!data){
-    return <StyledText>loading...</StyledText>
+    return <StyledText>Loading...</StyledText>
   }
   if (error){
-    return <StyledText>error!</StyledText>
+    return <StyledText>Error!</StyledText>
   }
 
   return <>
     <Head>
       <title> Your Video Game Reviews </title>
-      <link rel="preconnect" href="https://fonts.googleapis.com"/>
-      <link rel="preconnect" href="https://fonts.gstatic.com"/>
-      <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"/>
     </Head>
     <ReviewList data={data} error={error} mutate={mutate}/> 
   </>
