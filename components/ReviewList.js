@@ -38,16 +38,16 @@ export default function ReviewList({data, error, mutate}){
             </SelectFilter>
         </FilterWrapper>
         <ListWrapper id="the-reviews">
-        {(data.length > 0) ?
+        {data ? (data.length > 0) ?
             (isFiltered) ? (data.map((singleReview) => (
 
                 singleReview.num_stars === filterStars && <Review reviewData={singleReview} key={singleReview.title}></Review>  
-            ))) : (data ? data.map((singleReview) => (
+            ))) : (data.map((singleReview) => (
                  <Review reviewData={singleReview} key={singleReview.title}>
                 </Review>
-                )): []) : (
+                ))) : (
                 <NoReviewsText>No reviews to display.</NoReviewsText>
-            )}
+            ) : []}
         </ListWrapper>
     </PageWrapper>
 }
