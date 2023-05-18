@@ -7,10 +7,10 @@ function navigateToForm(){
 }
 
 export default function ReviewList({data, error, mutate}){
-
     // Referenced: https://stackoverflow.com/questions/5416767/get-selected-value-text-from-select-on-change
     const [isFiltered, setIsFiltered] = useState(false);
     const [filterStars, setFilterStars] = useState(-1);
+
     function setFilter(event){
         var value = parseInt(event.target.value);
         if (value >= 0){
@@ -21,6 +21,11 @@ export default function ReviewList({data, error, mutate}){
             setIsFiltered(false);
         }
     }
+
+    function filterByStars(numData){
+        return numData.num_stars === filterStars;
+    }
+
     return <PageWrapper>
         <PageTitle>Video Game Reviews</PageTitle>
         <AddReviewButton onClick={() => navigateToForm()}>+ Add Review</AddReviewButton>
@@ -39,15 +44,16 @@ export default function ReviewList({data, error, mutate}){
         </FilterWrapper>
         <ListWrapper id="the-reviews">
         {data ? (data.length > 0) ?
-            (isFiltered) ? (data.map((singleReview) => (
+            (isFiltered) ? (data.filter(filterByStars).length > 0 ? data.filter(filterByStars).map((singleReview) => (
 
-                singleReview.num_stars === filterStars && <Review reviewData={singleReview} key={singleReview.title}></Review>  
-            ))) : (data.map((singleReview) => (
+                <Review reviewData={singleReview} key={singleReview.title}></Review>  
+            )) : <NoReviewsText>No reviews to display.</NoReviewsText>) : (data.map((singleReview) => (
                  <Review reviewData={singleReview} key={singleReview.title}>
                 </Review>
                 ))) : (
                 <NoReviewsText>No reviews to display.</NoReviewsText>
             ) : []}
+            
         </ListWrapper>
     </PageWrapper>
 }
