@@ -42,10 +42,10 @@ export default function ReviewList({data, error, mutate}){
             (isFiltered) ? (data.map((singleReview) => (
 
                 singleReview.num_stars === filterStars && <Review reviewData={singleReview} key={singleReview.title}></Review>  
-            ))) : (data.map((singleReview) => (
+            ))) : (data ? data.map((singleReview) => (
                  <Review reviewData={singleReview} key={singleReview.title}>
                 </Review>
-                ))) : (
+                )): []) : (
                 <NoReviewsText>No reviews to display.</NoReviewsText>
             )}
         </ListWrapper>
