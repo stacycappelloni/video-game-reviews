@@ -62,7 +62,11 @@ export default function AddReviewPage({data, error, mutate}) {
 
             <LineSpacer></LineSpacer>
 
-            <FieldName htmlFor="stars">Rating: <Rating size="large" id="stars" name="star-input" defaultValue={0} value={starValue} onChange={(e) => setStarValue(e.target.value)}/></FieldName>
+            <RatingField>
+              <FieldName htmlFor="stars">Rating: 
+              </FieldName>
+              <Rating size="large" id="stars" name="star-input" defaultValue={0} value={starValue} onChange={(e) => setStarValue(e.target.value)}/>
+            </RatingField>
             
             <LineSpacer></LineSpacer>
 
@@ -97,6 +101,10 @@ background-color: #fff;
 height: 100%;
 padding: 15px;
 margin: 16px;
+`
+
+const RatingField = styled.div`
+align-items: center;
 `
 
 const PageWrapper = styled.div`
