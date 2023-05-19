@@ -28,20 +28,22 @@ export default function ReviewList({data, error, mutate}){
 
     return <PageWrapper>
         <PageTitle>Video Game Reviews</PageTitle>
-        <AddReviewButton onClick={() => navigateToForm()}>+ Add Review</AddReviewButton>
-        {/* referenced: https://www.w3schools.com/tags/tag_select.asp */}
-        <FilterWrapper>
-            <FilterLabel htmlFor="stars">Filter by Stars:</FilterLabel>
-            <SelectFilter name="stars" id="stars" onChange={setFilter}>
-                <option value="-1">All</option>
-                <option value="0">No Stars</option>
-                <option value="1">★</option>
-                <option value="2">★★</option>
-                <option value="3">★★★</option>
-                <option value="4">★★★★</option>
-                <option value="5">★★★★★</option>
-            </SelectFilter>
-        </FilterWrapper>
+            <Toolbar>
+            <AddReviewButton onClick={() => navigateToForm()}>+ Add Review</AddReviewButton>
+            {/* referenced: https://www.w3schools.com/tags/tag_select.asp */}
+            <FilterWrapper>
+                <FilterLabel htmlFor="stars">Filter:</FilterLabel>
+                <SelectFilter name="stars" id="stars" onChange={setFilter}>
+                    <option value="-1">All</option>
+                    <option value="0">No Stars</option>
+                    <option value="1">★</option>
+                    <option value="2">★★</option>
+                    <option value="3">★★★</option>
+                    <option value="4">★★★★</option>
+                    <option value="5">★★★★★</option>
+                </SelectFilter>
+            </FilterWrapper>
+        </Toolbar>
         <ListWrapper id="the-reviews">
         {data ? (data.length > 0) ?
             (isFiltered) ? (data.filter(filterByStars).length > 0 ? data.filter(filterByStars).map((singleReview) => (
@@ -66,17 +68,20 @@ padding: 0`
 
 const PageWrapper = styled.div`
 padding-left: 40px;  
-padding-right: 40px;`
+padding-right: 40px;
+width: 100%;
+`
 
 const AddReviewButton = styled.button`
 font-family: 'Press Start 2P';
 padding: 10px;
-margin-left: 15px;
+margin-left: 10px;
 background-color: #dac8e3`
 
 const PageTitle = styled.h1`
 font-family: 'Press Start 2P';
-text-align: center`
+text-align: center; 
+margin-bottom: 18px;`
 
 const FilterLabel = styled.label`
 font-family: 'Press Start 2P';
@@ -85,11 +90,12 @@ color: #fff;`
 const SelectFilter = styled.select`
 font-family: 'Press Start 2P';
 position: relative;
-background-color: #fff;`
+background-color: #fff;
+padding: 10px;`
 
 const FilterWrapper = styled.span`
-position: relative;
-left: 20px;`
+padding-left: 15px;
+padding-top: 15px;`
 
 const NoReviewsText = styled.h2`
 font-family: 'Press Start 2P';
@@ -97,3 +103,8 @@ color: #fff;
 font-weight: 400;
 margin-left: 15px;
 `
+
+const Toolbar = styled.div`
+display: flex;    
+align-items: baseline;  
+flex-wrap: wrap;`

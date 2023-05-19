@@ -25,8 +25,8 @@ const ReviewItem = styled.li`
 
 const GameTitle = styled.h2`
 font-family: 'Press Start 2P';
-font-size: 1.40rem`
+font-size: 1.25rem`
 
 const ReviewComment = styled.p`
 font-family: 'Press Start 2P';
-font-size: 1.15rem`
+font-size: 1rem`
