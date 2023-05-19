@@ -27,19 +27,23 @@ None
 
 4. A list of all references used to complete the assignment, including peers (if applicable):
 
-A. Murphy Studebaker
+  A. Murphy Studebaker
 
-B. https://mui.com/material-ui/react-rating/
+  B. https://mui.com/material-ui/react-rating/
 
-C. https://stackoverflow.com/questions/65297617/how-to-make-an-elements-background-color-a-little-darker-using-css
+  C. https://stackoverflow.com/questions/65297617/how-to-make-an-elements-background-color-a-little-darker-using-css
 
-D. https://stackoverflow.com/questions/5416767/get-selected-value-text-from-select-on-change
+  D. https://stackoverflow.com/questions/5416767/get-selected-value-text-from-select-on-change
 
-E. https://stackoverflow.com/questions/71233195/failed-to-load-resource-the-server-responded-with-a-status-of-500-in-when-de
+  E. https://stackoverflow.com/questions/71233195/failed-to-load-resource-the-server-responded-with-a-status-of-500-in-when-de
 
-F. https://docs.netlify.com/site-deploys/overview/#deploy-log
+  F. https://docs.netlify.com/site-deploys/overview/#deploy-log
 
-G. https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap
+  G. https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap
+
+  H. https://www.w3schools.com/jsref/jsref_filter.asp
+
+  I. https://docs.draftbit.com/docs/supabase
 
 5. Instructions for running the assignment:1. Visit https://video-game-reviews-cappelloni.netlify.app
 
