@@ -1,4 +1,51 @@
-# Example app with styled-components
+# Video Game Reviews 
+
+link: https://video-game-reviews-cappelloni.netlify.app
+
+1. Full name: Stacy Cappelloni      
+
+Student ID: 2339576      
+
+Chapman email: cappelloni@chapman.edu      
+
+Course number and section: CPSC 458-01      
+
+Assignment or exercise number: Project 4: Final Project
+
+
+2. List of all source files submitted for the assignment:
+
+While there are too many source files to list, below are the highlights/main pages I worked on: 
+
+A. In the components directory: AddReviewPage.js, Review.js, ReviewList.js
+
+B. In the pages directory: /api/index.js, AddReview.tsx, index.tsx
+
+3. Description of any known compile or runtime errors, code limitations, or deviations from the assignment specification:
+
+None
+
+4. A list of all references used to complete the assignment, including peers (if applicable):
+
+A. Murphy Studebaker
+
+B. https://mui.com/material-ui/react-rating/
+
+C. https://stackoverflow.com/questions/65297617/how-to-make-an-elements-background-color-a-little-darker-using-css
+
+D. https://stackoverflow.com/questions/5416767/get-selected-value-text-from-select-on-change
+
+E. https://stackoverflow.com/questions/71233195/failed-to-load-resource-the-server-responded-with-a-status-of-500-in-when-de
+
+F. https://docs.netlify.com/site-deploys/overview/#deploy-log
+
+G. https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap
+
+5. Instructions for running the assignment:1. Visit https://video-game-reviews-cappelloni.netlify.app
+
+Below is the premade README that was created when setting up the web app. 
+-------------------------------------------------------------
+## Example app with styled-components
 
 This example features how you use a different styling solution than [styled-jsx](https://github.com/vercel/styled-jsx) that also supports universal styles. That means we can serve the required styles for the first render within the HTML and then load the rest in the client. In this case we are using [styled-components](https://github.com/styled-components/styled-components).
 
